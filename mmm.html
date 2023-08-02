@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Aquí incluye tus enlaces a CSS y JS -->
+  <style>
+    img {
+      height: 150px;
+      cursor: pointer; /* Agregamos un cursor para indicar que las imágenes son clickeables */
+    }
+  </style>
+</head>
+<body>
+  <img src="https://clipart.info/images/ccovers/1495916678star-png-red-small-alpha-transparent-image-clip-art.png" onclick="showDiv('popis')">
+  <img src="https://clipart.info/images/ccovers/1495916678star-png-red-small-alpha-transparent-image-clip-art.png" onclick="showDiv('Contenido 2')">
+  <img src="https://clipart.info/images/ccovers/1495916678star-png-red-small-alpha-transparent-image-clip-art.png" onclick="showDiv('Contenido 3')">
+  
+  <div id="popis">
+    <div id="valor">100</div>
+    <input type="number" id="cantidad" placeholder="Ingresa la cantidad">
+    <button onclick="sumarValor()">Sumar</button>
+  </div>
+
+  <script>
+    function showDiv(content) {
+      document.getElementById("popis").innerHTML = content;
+    }
+    function sumarValor() {
+      // Obtener el valor ingresado por el usuario
+      var cantidad = parseInt(document.getElementById('cantidad').value);
+
+      // Obtener el valor actual del div
+      var valorActual = parseInt(document.getElementById('valor').innerText);
+
+      // Sumar el valor ingresado al valor actual
+      var resultado = valorActual + cantidad;
+
+      // Actualizar el contenido del div con el resultado
+      document.getElementById('valor').innerText = resultado;
+    }
+
+  </script>
+</body>
+</html>
+

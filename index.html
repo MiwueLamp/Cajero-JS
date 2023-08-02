@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Home</title>
+    <link
+      rel="shortcut icon"
+      href="./assents/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="marginUp">
+      <button id="logout">Cerrar Sesion</button>
+    </div>
+
+    <section class="home">
+      <h1>BIENVENIDA LINA AL CAJERO JS</h1>
+      <p>Tu saldo es de :</p>
+      <div id="saldo">50000</div>
+      <hr />
+      <p>Elige que deseas realizar</p>
+      <div class="opciones">
+        <div class="conten">
+          <div class="card" id="operacionSuma" onclick="operacionSuma()">
+            <img
+              class="imagenes"
+              src="./assents/depositar.png"
+              alt="depositar"
+            />
+            <span>DEPOSITAR</span>
+          </div>
+          <!-----------------------------------------------------pantallas de operacion-->
+          <div id="suma" style="display: none">
+            <span id="mensajeSuma">Por favor digita el monto a depositar</span>
+            <input
+              type="number"
+              id="numInput"
+              placeholder="Ingresa el monto"
+              style="text-decoration: none"
+              required
+              autofocus
+            />
+            <div class="contenBoton">
+              <button onclick="realizarSuma()" id="accion1">DEPOSITAR</button>
+              <button onclick="realizarResta()" id="cancelar">CANCELAR</button>
+            </div>
+            <p id="resultado"  style="display: none;"></p>
+          </div>
+          <!----------------------------------------------------------------------------->
+          <div class="card" id="operacionResta" onclick="operacionResta()">
+            <img class="imagenes" src="./assents/retirar.png" alt="retirar" />
+            <span>RETIRAR</span>
+          </div>
+          <!-----------------------------------------------------pantallas de operacion-->
+          <div id="resta" style="display: none">
+            <span id="mensajeResta">Por favor digita el monto a retirar</span>
+            <input
+              type="number"
+              id="numInput"
+              placeholder="Ingresa el monto"
+              style="text-decoration: none"
+              required
+              autofocus
+            />
+            <div class="contenBoton">
+              <button onclick="realizarResta()" id="accion2">RETIRAR</button>
+              <button onclick="realizarResta()" id="cancelar">CANCELAR</button>
+              <p id="resultado"></p>
+            </div>
+          </div>
+          <!----------------------------------------------------------------------------->
+          <div class="card" id="operacionConsulta" onclick="operacionConsulta()">
+            <img
+              class="imagenes"
+              src="./assents/consultar.png"
+              alt="consultar"
+            />
+            <span>CONSULTAR</span>
+          </div>
+          <!-----------------------------------------------------pantallas de operacion-->
+          <div id="consulta" style="display: none;">
+            <span id="mensajeResta">Este es el historial de tus movimientos</span>
+            <div id="movimientos">8000000</div>
+            <div class="contenBoton">
+              <button onclick="realizarResta()" id="cancelar">SALIR</button>
+              <p id="resultado"></p>
+          </div>
+          <!----------------------------------------------------------------------------->
+        </div>
+      </div>
+    </section>
+    <div class="marginDown"></div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
