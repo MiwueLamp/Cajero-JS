@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/signup.css">
     <title>Registro</title>
 </head>
+
 <body>
+    <div class="marginUp"></div>
     <section>
         <h2>Registro</h2>
+        
         <form id="signupForm">
             <label>Nombre</label>
-            <input type="text" placeholder="........" id="name" required autofocus>
+            <input type="text" placeholder="Escribe tu nombre aqui" id="name" required autofocus>
             <label>Mail</label>
-            <input type="email" placeholder="........" id="email" required autofocus>
+            <input type="email" placeholder="Escribe tu mail" id="email" required>
             <label>Contraseña</label>
-            <input type="password" placeholder="........" id="password" required >
-            <input type="submit" value="Registro" >
+            <input type="password" placeholder="Escribe tu password" id="password" required>
+            <label>Monto inicial de cuenta</label>
+            <input type="number" placeholder="El monto con el que iniciaras tu cuenta" id="monto" required>
+
+            <input type="submit" value="Registro">
         </form>
+
+
+
         <p>Ya tienes una cuenta?<a href="login.html">Login</a></p>
 
     </section>
-
+    <div class="marginDown"></div>
     <script src="./js/singnup.js"></script>
 </body>
+
 </html>

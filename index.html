@@ -17,11 +17,13 @@
     </div>
 
     <section class="home">
-      <h1>BIENVENIDA LINA AL CAJERO JS</h1>
+      <h1 id="saludoUsuario"></h1>
       <p>Tu saldo es de :</p>
-      <div id="saldo">50000</div>
+      <div id="saldo"></div>
       <hr />
       <p>Elige que deseas realizar</p>
+
+    <!------------------------------------------------------------OPCIONES DE OPERACIONES-->
       <div class="opciones">
         <div class="conten">
           <div class="card" id="operacionSuma" onclick="operacionSuma()">
@@ -32,46 +34,44 @@
             />
             <span>DEPOSITAR</span>
           </div>
-          <!-----------------------------------------------------pantallas de operacion-->
+          <!-----------------------------------------------------SUBPANTALLAS de operacion  SUMA-->
           <div id="suma" style="display: none">
-            <span id="mensajeSuma">Por favor digita el monto a depositar</span>
+            <span id="mensajeSuma">Por favor digita el monto a <strong id="str1">DEPOSITAR</strong></span>
             <input
               type="number"
               id="numInput"
               placeholder="Ingresa el monto"
               style="text-decoration: none"
               required
-              autofocus
             />
             <div class="contenBoton">
               <button onclick="realizarSuma()" id="accion1">DEPOSITAR</button>
-              <button onclick="realizarResta()" id="cancelar">CANCELAR</button>
+              <button onclick="salir1()" id="cancelar">CANCELAR</button>
+
             </div>
-            <p id="resultado"  style="display: none;"></p>
+            
           </div>
-          <!----------------------------------------------------------------------------->
+          <!-----------------------------------------------------------------------RESTA------>
           <div class="card" id="operacionResta" onclick="operacionResta()">
             <img class="imagenes" src="./assents/retirar.png" alt="retirar" />
             <span>RETIRAR</span>
           </div>
-          <!-----------------------------------------------------pantallas de operacion-->
+          <!-----------------------------------------------------SUBPANTALLA de operacion RESTA-->
           <div id="resta" style="display: none">
-            <span id="mensajeResta">Por favor digita el monto a retirar</span>
+            <span id="mensajeResta">Por favor digita el monto a <strong id="str2">RETIRAR</strong></span>
             <input
               type="number"
-              id="numInput"
+              id="numInput2"
               placeholder="Ingresa el monto"
               style="text-decoration: none"
               required
-              autofocus
             />
             <div class="contenBoton">
-              <button onclick="realizarResta()" id="accion2">RETIRAR</button>
-              <button onclick="realizarResta()" id="cancelar">CANCELAR</button>
-              <p id="resultado"></p>
+              <button onclick="realizarResta()" id="accion2" >RETIRAR</button>
+              <button onclick="salir()" id="cancelar">CANCELAR</button>
             </div>
           </div>
-          <!----------------------------------------------------------------------------->
+          <!--------------------------------------------------------------------------CONSULTA--->
           <div class="card" id="operacionConsulta" onclick="operacionConsulta()">
             <img
               class="imagenes"
@@ -80,19 +80,20 @@
             />
             <span>CONSULTAR</span>
           </div>
-          <!-----------------------------------------------------pantallas de operacion-->
+          <!----------------------------------------------------SUBPANTALLA de operacion CONSULTA-->
           <div id="consulta" style="display: none;">
             <span id="mensajeResta">Este es el historial de tus movimientos</span>
-            <div id="movimientos">8000000</div>
+            <div id="movimientos"></div>
             <div class="contenBoton">
-              <button onclick="realizarResta()" id="cancelar">SALIR</button>
-              <p id="resultado"></p>
+              <button onclick="salirConsulta()" id="cancelar">SALIR</button>
           </div>
           <!----------------------------------------------------------------------------->
         </div>
       </div>
+      <p id="resultado" style="display: none;"></p>
     </section>
     <div class="marginDown"></div>
     <script src="js/index.js"></script>
+    
   </body>
 </html>

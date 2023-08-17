@@ -1,0 +1,97 @@
+:root{
+    --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-mono);
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    background-color: ivory;
+}
+section h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+section form{
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 1);
+    justify-content: center;
+    background-color: #84CFF8;
+}
+section form label{
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+section form input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0.8em;
+    border-radius: 9px;
+    border:none;
+    background-color: #eee;
+    font-family: var(--font-mono);
+}
+section form input[type='submit']{
+    margin-top: 10px;
+    background-color: #FFAB48;
+    color: black;
+    font-weight: bolder;
+    font-family: var(--font-mono);
+    width: 30%;
+    justify-self: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+section form input[type='submit']:hover{
+    background-color:#ffc413;
+}
+section form input[type='submit']:active{
+    transform: scale(0.80);
+}
+section p{
+    margin-top:10px;
+}
+section p a{
+    text-decoration: none;
+    color: #003dff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*----------------------------------margen superior----------*/
+.marginUp{
+    background-color: #9926bc;
+    width: 100vw;
+    height: 10vh;
+    display: block;
+}
+.marginDown{
+    background-color: #9926bc;
+    width: 100vw;
+    height: 10vh;
+    display: block;
+}
+
+
